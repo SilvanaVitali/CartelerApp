@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Users/silgi/Desktop/Prueba Cencosud/CartelerApp/app/src/main/res/drawable/fondo.xml" value="0.1295" />
         <entry key="..\:/Users/silgi/Desktop/Prueba Cencosud/CartelerApp/app/src/main/res/drawable/splash.xml" value="0.16" />
+        <entry key="..\:/Users/silgi/Desktop/Prueba Cencosud/CartelerApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/silgi/Desktop/Prueba Cencosud/CartelerApp/app/src/main/res/layout/fragment_movie_detail.xml" value="0.1859375" />
+        <entry key="..\:/Users/silgi/Desktop/Prueba Cencosud/CartelerApp/app/src/main/res/layout/fragment_movie_list.xml" value="0.192481884057971" />
       </map>
     </option>
   </component>
