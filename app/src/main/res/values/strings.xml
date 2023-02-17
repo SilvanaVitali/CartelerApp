@@ -2,4 +2,11 @@
     <string name="app_name">CartelerApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textView_Release">Estreno</string>
+    <string name="example_title">Into America\'s Wild</string>
+    <string name="example_release">14 Feb 2020</string>
+    <string name="textView_Plot">Reseña</string>
+    <string name="example_plot">Step off the beaten path and connect to your inner trailblazer in this new adventure of the natural world. Starting at Oregon\'s stunning coast, explore the scenic byways, ancient homelands and many other wonderful natural scenarios.</string>
+    <string name="example_stars">John Herrington, Ariel Tweto, Jennifer Pharr Davis, Emma Faye Rudkin</string>
+    <string name="textView_stars">Actores</string>
 </resources>
