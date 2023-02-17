@@ -69,7 +69,11 @@ data class Movie(
 	val id: String,
 
 	@field:SerializedName("releaseState")
-	val releaseState: String
+	val releaseState: String,
+
+	@field:SerializedName("errorMessage")
+	val errorMessage: String
+
 )
 
 data class GenreListItem(
