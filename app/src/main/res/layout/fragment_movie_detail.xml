@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,16 +9,22 @@
     tools:context=".view.MovieDetailFragment">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp">
 
         <View
             android:id="@+id/view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.6"
             android:background="@drawable/rounded_layout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="5dp"
             android:background="@color/white"
             android:text="@string/example_title"
             android:textAlignment="center"
@@ -54,6 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:layout_marginRight="5dp"
             android:background="@color/white"
             android:text="@string/textView_stars"
             android:textAlignment="center"
@@ -83,6 +92,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="5dp"
             android:background="@color/white"
             android:text="@string/textView_Plot"
             android:textAlignment="center"
@@ -110,13 +120,16 @@
             android:id="@+id/textViewReleaseDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/color1"
-            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_layout"
+            android:backgroundTint="@color/color4"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="40dp"
             android:text="@string/textView_Release"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/color2"
             android:textSize="30sp"
-            android:textStyle="italic"
+            android:textStyle="bold|italic"
             app:layout_constraintEnd_toStartOf="@+id/imageView12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView12" />
@@ -140,11 +153,14 @@
             android:id="@+id/imageView12"
             android:layout_width="153dp"
             android:layout_height="143dp"
+            android:alpha="0.5"
             android:src="@drawable/logo"
+            android:layout_marginBottom="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlotDetail" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </ScrollView>
 </FrameLayout>

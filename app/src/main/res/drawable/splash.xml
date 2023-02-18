@@ -5,11 +5,10 @@
 
     <item
         android:left="50dp"
-        android:right="50dp"
-        android:top="300dp"
-        android:bottom="300dp">
+        android:right="50dp">
 
-        <bitmap android:src="@drawable/logo"
+        <bitmap android:src="@drawable/logo_pequenho"
+            android:gravity="center"
             />
     </item>
 

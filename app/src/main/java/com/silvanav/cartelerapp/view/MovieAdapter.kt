@@ -2,7 +2,9 @@ package com.silvanav.cartelerapp.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.silvanav.cartelerapp.R
 import com.silvanav.cartelerapp.databinding.MovieItemBinding
 import com.silvanav.cartelerapp.model.Movie
 import com.squareup.picasso.Picasso
@@ -34,6 +36,10 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
             binding.tvTitle.text = movie.title
             binding.tvReleaseState.text = movie.releaseState
             Picasso.get().load(movie.image).into(binding.ivMovie)
+
+            this.itemView.setOnClickListener {
+                Navigation.findNavController(it).navigate(R.id.action_movieListFragment_to_movieDetailFragment)
+            }
         }
     }
 }
