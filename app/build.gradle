@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-android'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-android-extensions'
 
 }
 
@@ -64,6 +65,13 @@ dependencies {
 
     //asLiveData()
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.0"
+
+    //Room components
+    def roomVersion="2.5.0-alpha02"
+
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

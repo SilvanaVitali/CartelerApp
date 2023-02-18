@@ -1,6 +1,10 @@
 package com.silvanav.cartelerapp.model
 
+import androidx.room.Embedded
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.RawValue
 
 data class MovieData(
 
@@ -12,7 +16,12 @@ data class MovieData(
 
 )
 
+@Entity
 data class Movie(
+
+
+	@field:SerializedName("id")
+	@PrimaryKey val id: String,
 
 	@field:SerializedName("image")
 	val image: String,
@@ -29,14 +38,16 @@ data class Movie(
 	@field:SerializedName("directors")
 	val directors: String,
 
+	@Embedded
 	@field:SerializedName("genreList")
-	val genreList: List<GenreListItem>,
+	val genreList: @RawValue GenreListItem,
 
 	@field:SerializedName("metacriticRating")
 	val metacriticRating: String,
 
+	@Embedded
 	@field:SerializedName("directorList")
-	val directorList: List<DirectorListItem>,
+	val directorList: @RawValue DirectorListItem,
 
 	@field:SerializedName("stars")
 	val stars: String,
@@ -62,17 +73,15 @@ data class Movie(
 	@field:SerializedName("contentRating")
 	val contentRating: String,
 
+	@Embedded
 	@field:SerializedName("starList")
-	val starList: List<StarListItem>,
-
-	@field:SerializedName("id")
-	val id: String,
+	val starList: @RawValue StarListItem,
 
 	@field:SerializedName("releaseState")
 	val releaseState: String,
 
 	@field:SerializedName("errorMessage")
-	val errorMessage: String
+	val errorMessage: String?
 
 )
 
@@ -88,17 +97,17 @@ data class GenreListItem(
 data class StarListItem(
 
 	@field:SerializedName("name")
-	val name: String,
+	val nameStarList: String,
 
 	@field:SerializedName("id")
-	val id: String
+	val idStarList: String
 )
 
 data class DirectorListItem(
 
 	@field:SerializedName("name")
-	val name: String,
+	val nameDirectorList: String,
 
 	@field:SerializedName("id")
-	val id: String
+	val idDirectorList: String
 )
