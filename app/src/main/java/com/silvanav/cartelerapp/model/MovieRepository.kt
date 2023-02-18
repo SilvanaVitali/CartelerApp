@@ -6,10 +6,10 @@ import com.silvanav.cartelerapp.model.remote.RetrofitClient
 class MovieRepository {
 
     private val TAG = "Repository"
+    private val movieList = mutableListOf<Movie>()
 
      suspend fun getAllMovies() : MutableList<Movie>{
         val response = RetrofitClient.apiService.getMovies()
-         val movieList = mutableListOf<Movie>()
 
         when (response.isSuccessful) {
             true -> {
