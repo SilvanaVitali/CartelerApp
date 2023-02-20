@@ -4,10 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.silvanav.cartelerapp.R
 import com.silvanav.cartelerapp.databinding.MovieItemBinding
 import com.silvanav.cartelerapp.model.Movie
 import com.squareup.picasso.Picasso
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
@@ -25,9 +27,16 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     override fun getItemCount(): Int = movieList.size
 
     fun update(list: List<Movie>){
-        movieList.clear()
-        movieList.addAll(list)
-        notifyDataSetChanged()
+        if (list.isNotEmpty()) {
+            movieList.clear()
+            movieList.addAll(list.sortedByDescending {stringToDate(it.releaseState)})
+            notifyDataSetChanged()
+        }
+    }
+
+    fun stringToDate(releaseState: String): LocalDate {
+        val formatter = DateTimeFormatter.ofPattern("dd MMM yyyy", Locale.US)
+        return LocalDate.parse(releaseState,formatter)
     }
 
     inner class MovieViewHolder(val binding: MovieItemBinding) : RecyclerView.ViewHolder(binding.root){
@@ -38,7 +47,8 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
             Picasso.get().load(movie.image).into(binding.ivMovie)
 
             this.itemView.setOnClickListener {
-                Navigation.findNavController(it).navigate(R.id.action_movieListFragment_to_movieDetailFragment)
+                val action = MovieListFragmentDirections.actionMovieListFragmentToMovieDetailFragment(movie)
+                Navigation.findNavController(it).navigate(action)
             }
         }
     }
