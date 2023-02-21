@@ -26,11 +26,19 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     override fun getItemCount(): Int = movieList.size
 
-    fun update(list: List<Movie>){
+    fun update(list: List<Movie>, string: String, test: Boolean = false){
         if (list.isNotEmpty()) {
             movieList.clear()
+            orderBy(list, string)
+            if (!test) {notifyDataSetChanged()}
+        }
+    }
+
+    fun orderBy(list: List<Movie>,string: String) {
+        if (string == "Ascendente") {
+            movieList.addAll(list.sortedBy {stringToDate(it.releaseState)})
+        } else {
             movieList.addAll(list.sortedByDescending {stringToDate(it.releaseState)})
-            notifyDataSetChanged()
         }
     }
 

@@ -19,7 +19,7 @@ class MovieViewModel: ViewModel() {
         getAllMovies()
     }
 
-    fun getAllMovies() = viewModelScope.launch {
+    private fun getAllMovies() = viewModelScope.launch {
             withContext(Dispatchers.IO) {
                 repository.getAllMovies()
             }

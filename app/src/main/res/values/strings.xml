@@ -9,4 +9,10 @@
     <string name="example_plot">Step off the beaten path and connect to your inner trailblazer in this new adventure of the natural world. Starting at Oregon\'s stunning coast, explore the scenic byways, ancient homelands and many other wonderful natural scenarios.</string>
     <string name="example_stars">John Herrington, Ariel Tweto, Jennifer Pharr Davis, Emma Faye Rudkin</string>
     <string name="textView_stars">Actores</string>
+    <string name="start_spinner">Orden por fecha de estreno</string>
+    <string name="order_release">Orden Fecha Estreno</string>
+    <string-array name="order_by">
+        <item>Ascendente</item>
+        <item>Descendente</item>
+    </string-array>
 </resources>
