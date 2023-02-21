@@ -14,11 +14,11 @@
 * [Tecnologías utilizadas](#tecnologías-utilizadas)
 
 ## Descripción del proyecto :bookmark_tabs:
-Bienvenido a CartelerApp, aplicación creada para dispositivos Android donde encontrarás un listado de todas películas en cartelera ordenadas según su fecha de estreno. Si quieres tener mayor detalle cada una de ellas, simplemente selecciona la que te interese y podrás visualizar una pequeña reseña junto con los principales actores que participan en ella.
+Bienvenido a CartelerApp, aplicación creada para dispositivos Android (min Sdk 26) donde encontrarás un listado de todas películas en cartelera, las cuales podrás ordenar según su fecha de estreno de manera ascendente o descendete. Si quieres tener mayor detalle cada una de ellas, simplemente selecciona la que te interese y podrás visualizar una pequeña reseña junto con los principales actores que participan en ella.
 
 ## Estado del proyecto :hammer_and_wrench:
 
-:construction: Proyecto en construcción :construction: 
+:construction: Proyecto en construcción :construction:
 
 - [x] Splash
 - [x] Permiso de internet y dependencias
@@ -28,8 +28,8 @@ Bienvenido a CartelerApp, aplicación creada para dispositivos Android donde enc
 - [x] Repository
 - [X] ViewModel
 - [X] Adapter
-- [ ] Persistencia de datos ROOM
-- [ ] Navigation
+- [X] Persistencia de datos ROOM
+- [X] Navigation
 - [ ] Test
 
 ## Tecnologías utilizadas :woman_technologist:
